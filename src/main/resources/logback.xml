@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %replace([requestId=%X{requestId}]){'\[requestId=\]', ''} %logger{36}  - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+    <logger name="task.service" level="debug" additivity="false">
+        <appender-ref ref="Console"/>
+    </logger>
+    <root level="error">
+        <appender-ref ref="Console"/>
+    </root>
+</configuration>
