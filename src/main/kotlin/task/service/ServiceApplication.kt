@@ -11,6 +11,5 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 class ServiceApplication
 
 fun main(args: Array<String>) {
-  println("CPU Cores Available: ${Runtime.getRuntime().availableProcessors()}")
   runApplication<ServiceApplication>(*args)
 }
